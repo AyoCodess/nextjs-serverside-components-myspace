@@ -3,9 +3,9 @@
 
 View logged in user server side.
 
-if user is not logged in they will be redirected to login page
+- if user is not logged in they will be redirected to login page
 
-```api/user``
+``api/user``
 
 
-
+- authentication is connected to the database via next auth prisma adapter

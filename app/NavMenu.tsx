@@ -6,7 +6,7 @@ import AuthCheck from '@/components/AuthCheck';
 
 export default function NavMenu() {
   return (
-    <nav className={`${styles.nav} p-4`}>
+    <nav className={`${styles.nav} p-4 flex-col sm:flex-row sm:h-[70px] `}>
       <Link href={'/'}>
         <Image
           src="/logo.svg" // Route of the image file
@@ -25,7 +25,7 @@ export default function NavMenu() {
         <li>
           <Link href={'/users'}>Users</Link>
         </li>
-        <li>
+        <li className="ml-4">
           <SignInButton />
         </li>
         <li>
