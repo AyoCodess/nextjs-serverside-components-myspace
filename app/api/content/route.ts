@@ -42,3 +42,5 @@ export async function GET() {
   // can do stuff on the server here
   return NextResponse.json(posts);
 }
+
+
