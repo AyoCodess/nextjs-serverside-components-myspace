@@ -12,8 +12,6 @@ export const metadata: Metadata = {
 export default async function About() {
   const session = await getServerSession(authOptions);
 
-  console.log('session 2', session); // console.log('session', session
-
   if (!session) {
     return redirect('/api/auth/signin');
   }
