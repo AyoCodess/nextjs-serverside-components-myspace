@@ -6,6 +6,8 @@ export async function GET() {
   // can do stuff on the server here
   const session = await getServerSession(authOptions);
 
+  console.log(session);
+
   if (!session)
     return NextResponse.redirect('http://localhost:3000/api/auth/signin');
 

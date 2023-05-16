@@ -26,10 +26,13 @@ export default function NavMenu() {
           <Link href={'/blog-static'}>Blog-static</Link>
         </li>
         <li>
-          <Link href={'/api/user'}>User</Link>
+          <Link href={'/api/user'}>Auth User</Link>
         </li>
         <li>
-          <Link href={'/api/users'}>Session</Link>
+          <Link href={'/api/users'}>DB Session</Link>
+        </li>
+        <li>
+          <Link href={'/users'}>DB Users</Link>
         </li>
         <li className="ml-4">
           <SignInButton />
