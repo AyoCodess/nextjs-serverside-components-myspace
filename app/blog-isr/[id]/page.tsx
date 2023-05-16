@@ -1,6 +1,7 @@
 import React from 'react';
 
-export const revalidate = 420;
+// export const revalidate = 420;
+
 
 interface Post {
   id: string;
@@ -13,7 +14,7 @@ interface Params {
 }
 
 // we get excellent performance and fresh data with this approach by using ISR to generate static pages at build time rather than at request time
-export async function getStaticParams() {
+export async function generateStaticParams() {
   const posts: Post[] = await fetch('http://localhost:3000/api/content').then(
     (res) => res.json()
   );
@@ -23,7 +24,7 @@ export async function getStaticParams() {
   }));
 }
 
-async function getBlogPostBasedOnSlug({ params }: Params) {
+async function getBlogPostBasedOnId({ params }: Params) {
   const posts: Post[] = await fetch('http://localhost:3000/api/content').then(
     (res) => res.json()
   );
@@ -33,7 +34,7 @@ async function getBlogPostBasedOnSlug({ params }: Params) {
 
 export default async function BlogPostPage({ params }: Params) {
   //deduped
-  const post = await getBlogPostBasedOnSlug({ params });
+  const post = await getBlogPostBasedOnId({ params });
 
   if (!post) return <p> no posts</p>;
   return (
