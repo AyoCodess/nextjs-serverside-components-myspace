@@ -3,8 +3,10 @@ import React from 'react';
 
 import styles from './page.module.css';
 import UserCard from '@/components/UserCard/UserCard';
+import { FetchError } from '@/lib/exceptions';
 
 export default async function UsersList() {
+  // throw new FetchError(); // This will be caught by the ErrorBoundary
   const users = await prisma.user.findMany();
   return (
     <main>
