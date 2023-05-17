@@ -41,7 +41,6 @@ export function ProfileForm({ user }: any) {
         <input type="text" name="age" defaultValue={user?.age ?? 0} />
         <label htmlFor="image">Profile Image URL</label>
         <input type="text" name="image" defaultValue={user?.image ?? ''} />
-
         <button type="submit">Save</button>
       </form>
     </div>

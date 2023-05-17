@@ -15,7 +15,7 @@ export default function Error({
 
   return (
     <div className="bg-white flex flex-col items-center justify-center h-screen gap-5">
-      <h2>{error.message}</h2>
+      <h2>Something when wrong!</h2>
       <button
         className="shadow bg-blue-500 p-2 text-white"
         onClick={() => reset()}
