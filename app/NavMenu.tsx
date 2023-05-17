@@ -34,6 +34,9 @@ export default function NavMenu() {
         <li>
           <Link href={'/users'}>DB Users</Link>
         </li>
+        <li>
+          <Link href={'/dashboard'}>Dashboard</Link>
+        </li>
         <li className="ml-4">
           <SignInButton />
         </li>
